@@ -549,3 +549,9 @@ class DockerTasker(LastLogger):
             response = response is not None
         logger.debug("image exists: %s", response)
         return response
+
+    def get_version(self):
+        """
+        return version information
+        """
+        return self.d.version()
