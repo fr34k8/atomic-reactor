@@ -68,6 +68,17 @@ mock_push_logs = \
     b'{"errorDetail":{"message":"Repository does not exist: localhost:5000/atomic-reactor-tests-b3a11e13d27c428f8fa2914c8c6a6d96"},' \
     b'"error":"Repository does not exist: localhost:5000/atomic-reactor-tests-b3a11e13d27c428f8fa2914c8c6a6d96"}\r\n'
 
+mock_version = {
+    u'KernelVersion': u'4.0.0',
+    u'Os': u'linux',
+    u'ApiVersion': u'1.19',
+    u'Version': u'1.7.0',
+    u'GitCommit': u'1234567/1.7.0',
+    u'PackageVersion': u'docker-1.7.0-1.fc22.x86_64',
+    u'Arch': u'amd64',
+    u'GoVersion': u'go1.4.2',
+}
+
 def _find_image(img, ignore_registry=False):
     global mock_images
 
@@ -160,6 +171,7 @@ def mock_docker(build_should_fail=False,
     flexmock(docker.Client, start=lambda cid, **kwargs: None)
     flexmock(docker.Client, tag=lambda img, rep, **kwargs: True)
     flexmock(docker.Client, wait=lambda cid: 1 if wait_should_fail else 0)
+    flexmock(docker.Client, version=lambda **kwargs: mock_version)
     class GetImageResult(object):
         data = b''
         def __init__(self):

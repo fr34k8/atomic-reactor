@@ -14,6 +14,16 @@ __all__ = ('PostBuildRPMqaPlugin', )
 
 class PostBuildRPMqaPlugin(PostBuildPlugin):
     key = "all_rpm_packages"
+    rpm_tags = [
+        'NAME',
+        'VERSION',
+        'RELEASE',
+        'ARCH',
+        'EPOCH',
+        'SIZE',
+        'SIGMD5',
+        'BUILDTIME',
+    ]
 
     def __init__(self, tasker, workflow, image_id):
         """
@@ -27,9 +37,10 @@ class PostBuildRPMqaPlugin(PostBuildPlugin):
         self.image_id = image_id
 
     def run(self):
+        fmt = ",".join(["%%{%s}" % tag for tag in self.rpm_tags])
         container_id = self.tasker.run(
             self.image_id,
-            command="-qa --qf '%{NAME},%{VERSION},%{RELEASE},%{ARCH},%{EPOCH},%{SIZE},%{SIGMD5},%{BUILDTIME}\n'",
+            command="-qa --qf '{0}\n'".format(fmt),
             create_kwargs={"entrypoint": "/bin/rpm"},
             start_kwargs={},
         )
