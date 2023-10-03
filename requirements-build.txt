@@ -152,9 +152,9 @@ setuptools-rust==1.6.0 \
     --hash=sha256:c86e734deac330597998bfbc08da45187e6b27837e23bd91eadb320732392262 \
     --hash=sha256:e28ae09fb7167c44ab34434eb49279307d611547cb56cb9789955cdb54a1aed9
     # via -r requirements-build.in
-setuptools-scm[toml]==7.1.0 \
-    --hash=sha256:6c508345a771aad7d56ebff0e70628bf2b0ec7573762be9960214730de278f27 \
-    --hash=sha256:73988b6d848709e2af142aa48c986ea29592bbcfca5375678064708205253d8e
+setuptools-scm[toml]==8.0.4 \
+    --hash=sha256:b47844cd2a84b83b3187a5782c71128c28b4c94cad8bfb871da2784a5cb54c4f \
+    --hash=sha256:b5f43ff6800669595193fd09891564ee9d1d7dcb196cab4b2506d53a2e1c95c7
     # via -r requirements-build.in
 tomli==1.0.1 \
     --hash=sha256:597db31e0350ef52f55595244ab74915daf8c03c8bda7bfb61a4297ab01f98fe \
