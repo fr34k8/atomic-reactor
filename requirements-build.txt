@@ -109,9 +109,9 @@ packaging==24.1 \
     # via
     #   -r requirements-build.in
     #   setuptools-scm
-poetry-core==1.6.1 \
-    --hash=sha256:0f9b0de39665f36d6594657e7d57b6f463cc10f30c28e6d1c3b9ff54c26c9ac3 \
-    --hash=sha256:70707340447dee0e7f334f9495ae652481c67b32d8d218f296a376ac2ed73573
+poetry-core==1.8.1 \
+    --hash=sha256:194832b24f3283e01c5402eae71a6aae850ecdfe53f50a979c76bf7aa5010ffa \
+    --hash=sha256:67a76c671da2a70e55047cddda83566035b701f7e463b32a2abfeac6e2a16376
     # via -r requirements-build.in
 pycairo==1.20.1 \
     --hash=sha256:0d7a6754d410d911a46f00396bee4be96500ccd3d178e7e98aef1140e3dd67ae \
