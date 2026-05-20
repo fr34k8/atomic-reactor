@@ -34,6 +34,8 @@ cryptography==3.4.8
     #   requests-kerberos
 decorator==5.1.0
     # via gssapi
+defusedxml==0.7.1
+    # via koji
 deprecated==1.2.14
     # via
     #   opentelemetry-api
@@ -71,7 +73,7 @@ jsonschema==4.1.2
     # via
     #   -r requirements.in
     #   osbs-client
-koji==1.26.1
+koji==1.36.0
     # via -r requirements.in
 krb5==0.2.0
     # via pyspnego

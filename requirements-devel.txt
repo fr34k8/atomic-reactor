@@ -37,6 +37,8 @@ cryptography==3.4.8
     #   requests-kerberos
 decorator==5.1.0
     # via gssapi
+defusedxml==0.7.1
+    # via koji
 deprecated==1.2.14
     # via
     #   opentelemetry-api
@@ -56,6 +58,10 @@ flatpak-module-tools==0.14
     # via -r requirements.in
 flexmock==0.11.1
     # via -r tests/requirements.in
+gitdb==4.0.12
+    # via gitpython
+gitpython==3.1.50
+    # via -r requirements.in
 googleapis-common-protos==1.60.0
     # via
     #   opentelemetry-exporter-otlp-proto-grpc
@@ -78,7 +84,7 @@ jsonschema==4.1.2
     # via
     #   -r requirements.in
     #   osbs-client
-koji==1.26.1
+koji==1.36.0
     # via -r requirements.in
 krb5==0.2.0
     # via pyspnego
@@ -233,6 +239,8 @@ six==1.16.0
     #   python-dateutil
     #   requests-mock
     #   responses
+smmap==5.0.3
+    # via gitdb
 toml==0.10.2
     # via pytest
 tomli==1.2.2
@@ -243,6 +251,7 @@ trove-classifiers==2023.8.7
     # via hatchling
 typing-extensions==4.7.1
     # via
+    #   gitpython
     #   opentelemetry-sdk
     #   pydantic
 urllib3==1.26.19

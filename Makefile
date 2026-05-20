@@ -7,7 +7,7 @@ venv:
 
 .PHONY: pip-compile
 pip-compile: pip-tools
-	venv/bin/pip-compile --output-file=requirements.txt requirements.in
+	venv/bin/pip-compile --allow-unsafe --output-file=requirements.txt requirements.in
 	venv/bin/pip-compile --generate-hashes --output-file=tests/requirements.txt tests/requirements.in
 	# --allow-unsafe: because we are specifying pip as a dependency
 	venv/bin/pip-compile --generate-hashes --allow-unsafe --output-file=requirements-pip.txt \

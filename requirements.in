@@ -11,7 +11,7 @@ git+https://github.com/containerbuildsystem/osbs-client@eda77aa1da23ac97e0f4827e
 # cannot build cryptography with rust for version >= 3.5
 cryptography < 3.5
 requests
-koji
+koji >= 1.36
 PyGObject
 reflink
 urllib3 < 2.0
